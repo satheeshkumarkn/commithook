@@ -1,2 +1,2 @@
 [alias]
-    setup = "!sh setup-hooks.sh"
+    setup = "/scripts/hooks/!sh setup-hooks.sh"
