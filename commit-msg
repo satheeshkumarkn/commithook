@@ -7,8 +7,8 @@ JIRA_API_TOKEN="ATATT3xFfGF0G3vBEDTbcnkDxxGaBAnEj_0cs75Hksk2NnlJiqlynTiTJWmdMeWf
 JIRA_USER_EMAIL="satheesh.kumarkn@365smartshop.com"
 JIRA_PROJECT_KEY="SOS"
 
-# Pattern to match Jira ID (e.g., PROJ-123 : message)
-JIRA_ID_PATTERN="^($JIRA_PROJECT_KEY-[0-9]+) : "
+# Pattern to match Jira ID with a message (e.g., PROJ-123 : message)
+JIRA_ID_PATTERN="^($JIRA_PROJECT_KEY-[0-9]+ : .+)"
 
 # Function to validate Jira ID using Jira API
 validate_jira_id() {
