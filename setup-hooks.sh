@@ -9,9 +9,12 @@ cp scripts/hooks/post-checkout .git/hooks/post-checkout
 chmod +x .git/hooks/post-checkout
 
 # Move the commit-msg hook script into the .git/hooks directory
-cp commit-msg .git/hooks/commit-msg
+cp scripts/hooks/commit-msg .git/hooks/commit-msg
 
 # Make the commit-msg hook script executable
 chmod +x .git/hooks/commit-msg
 
 echo "Git hooks setup completed."
+
+echo "Git hooks setup completed."
+read -p "Press [Enter] to exit..."
