@@ -1,2 +1,2 @@
 [alias]
-    setup = "!sh setup-hooks.sh 2>&1 | tee setup-hooks.log"
+    setup = "!sh setup-hooks.sh"
