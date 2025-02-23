@@ -7,8 +7,8 @@ JIRA_API_TOKEN="ATATT3xFfGF0G3vBEDTbcnkDxxGaBAnEj_0cs75Hksk2NnlJiqlynTiTJWmdMeWf
 JIRA_USER_EMAIL="satheesh.kumarkn@365smartshop.com"
 JIRA_PROJECT_KEY="SOS"
 
-# Pattern to match Jira ID (e.g., PROJ-123)
-JIRA_ID_PATTERN="^($JIRA_PROJECT_KEY-[0-9]+)"
+# Pattern to match Jira ID (e.g., PROJ-123 : message)
+JIRA_ID_PATTERN="^($JIRA_PROJECT_KEY-[0-9]+) : "
 
 # Function to validate Jira ID using Jira API
 validate_jira_id() {
@@ -30,7 +30,7 @@ validate_jira_id() {
 }
 
 if ! echo "$COMMIT_MSG" | grep -qE "$JIRA_ID_PATTERN"; then
-    echo "ERROR: Commit message must contain a valid Jira ID (e.g., $JIRA_PROJECT_KEY-123)."
+    echo "ERROR: Commit message must contain a valid Jira ID (e.g., $JIRA_PROJECT_KEY-123 : message)."
     exit 1
 else
     JIRA_ID=$(echo "$COMMIT_MSG" | grep -oE "$JIRA_ID_PATTERN")
